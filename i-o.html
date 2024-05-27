@@ -2,11 +2,14 @@
 <head></head>
 <body>
 <select id="input">
-<option>option zero</option>
-<option>option one</option>
-<option>option two</option>
-<option>option three</option>
-<option>option four</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
 </select>
 <button onclick="funct();">click</button>
 <p id="output"></p>
@@ -16,14 +19,32 @@ let o = document.getElementById('output');
 
 function funct() {
   switch (i.options[i.selectedIndex].text) {
-    case "option one":
-      o.textContent = "success"
+    case "1": o.textContent = "feline";
       break;
-    case "option three":
-      o.textContent = "success"
+
+    case "2": o.textContent = "lagomorph"
       break;
-    default:
-      o.textContent = 'you selected ' + i.options[i.selectedIndex].text + '.';
+    
+    case "3": o.textContent = "cervid";
+      break;
+
+    case "4": o.textContent = "vulpine";
+      break;
+
+    case:"5": o.textContent = "ursine";
+      break;
+
+    case "6": o.textContent = "canine";
+      break;
+
+    case "7": o.textContent = "avian";
+      break;
+
+    case "8": o.textContent = "rodent";
+      break;
+      
+    default: o.textContent = 'you selected ' + i.options[i.selectedIndex].text + '.';
+      break;
 }
 }
 </script>
