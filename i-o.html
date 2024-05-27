@@ -15,6 +15,14 @@ let i = document.getElementById('input');
 let o = document.getElementById('output');
 
 function funct() {
-  o.textContent = 'you selected ' + i.options[i.selectedIndex].text + '.';
+  switch (i.options[i.selectedIndex].text) {
+    case "option one":
+      o.textContent = "meow"
+      break;
+    case "option three":
+      o.textContent = "arf"
+      break;
+    default:
+      o.textContent = 'you selected ' + i.options[i.selectedIndex].text + '.';
 }
 </script>
