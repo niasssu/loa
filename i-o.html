@@ -2,6 +2,7 @@
 <head></head>
 <body>
 <select id="input">
+<option>0</option>
 <option>1</option>
 <option>2</option>
 <option>3</option>
@@ -11,13 +12,13 @@
 <option>7</option>
 <option>8</option>
 </select>
-<button onclick="funct();">click</button>
-<p id="output">roll a d8 and click the number you get! then click the button to see what you get!</p>
+<button onclick="aniSelect();">click</button>
+<p id="output">roll a d8 and click the number you get! then click the button to see what animal you get!</p>
 <script>
 let i = document.getElementById('input');
 let o = document.getElementById('output');
 
-function funct() {
+function aniSelect() {
   switch (i.options[i.selectedIndex].text) {
       
     case "1":
@@ -55,6 +56,6 @@ function funct() {
     default:
       o.textContent = 'you selected ' + i.options[i.selectedIndex].text + '.';
       break;
-}
+  }
 }
 </script>
