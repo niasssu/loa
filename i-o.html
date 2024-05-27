@@ -5,16 +5,13 @@
 <option>option zero</option>
 <option>option one</option>
 </select>
+<button onclick="funct();">click</button>
 <p id="output"></p>
 <script>
 let i = document.getElementById('input');
 let o = document.getElementById('output');
 
-switch (i.textContent) {
-case 'option one':
-o.textContent = "you selected option one.";
-break;
-default:
-o.textContent = "select an option.";
+function funct() {
+  o.textContent = i.options[i.selectedIndex].text;
 }
 </script>
