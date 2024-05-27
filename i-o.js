@@ -3,10 +3,10 @@
 let i = document.getElementById('input');
 let o = document.getElementById('output');
 
-switch (i.textContent) {
+switch (i.options[i.selectedIndex].text) {
 case 'option one':
-o.textContent = "you selected option one.";
+o.textContent = "YEAH!";
 break;
 default:
-o.textContent = "select an option.";
+o.textContent = "wrong answer";
 }
