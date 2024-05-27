@@ -1,12 +1,12 @@
 // javascript for output
 
-let in = document.getElementById('input');
-let out = document.getElementById('output');
+let i = document.getElementById('input');
+let o = document.getElementById('output');
 
-switch (in.textContent) {
+switch (i.textContent) {
 case 'option one':
-out.textContent = "you selected option one.";
+o.textContent = "you selected option one.";
 break;
 default:
-out.textContent = "select an option.";
+o.textContent = "select an option.";
 }
