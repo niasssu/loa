@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <head><title>TF Roulette</title></head>
 <body>
-<select id="input">
+<select id="in1">
 <option>0</option>
 <option>1</option>
 <option>2</option>
@@ -12,50 +12,74 @@
 <option>7</option>
 <option>8</option>
 </select>
+<select id="in2">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+</select>
 <button onclick="aniSelect();">click</button>
-<p id="output">roll a d8 and click the number you get! then click the button to see what animal you get!</p>
+<p id="output">roll a d8 for the first one and a d4 for the second. then, click the button for your animal!</p>
 <script>
-let i = document.getElementById('input');
+let i = document.getElementById('in1');
+let e = document.getElementById('in2');
 let o = document.getElementById('output');
 
+  
 function aniSelect() {
+  switch (e.options[e.selectedIndex].text) {
+    case "1":
+      var material = "plush";
+      break;
+    case "2":
+      var material = "metal";
+      break;
+    case "3":
+      var material = "";
+      break;
+    case "4":
+      var material = "rubber"
+    default:
+      break;
+  }
   switch (i.options[i.selectedIndex].text) {
       
     case "1":
-      o.textContent = "poof! you became a cat!";
+      var animal = "cat";
       break;
 
     case "2":
-      o.textContent = "poof! you became a bunny!";
+      var animal = "bunny";
       break;
     
     case "3":
-      o.textContent = "poof! you became a deer!";
+      var animal = "deer";
       break;
 
     case "4":
-      o.textContent = "poof! you became a fox!";
+      var animal = "fox";
       break;
 
     case "5":
-      o.textContent = "poof! you became a bear!";
+      var animal = "bear";
       break;
 
     case "6":
-      o.textContent = "poof! you became a dog!";
+      var animal = "dog";
       break;
 
     case "7":
-      o.textContent = "poof! you became a bird!";
+      var animal = "bird";
       break;
 
     case "8":
-      o.textContent = "poof! you became a mouse!";
+      var animal = "mouse";
       break;
       
     default:
-      o.textContent = 'you selected ' + i.options[i.selectedIndex].text + '.';
       break;
   }
+  o.textContent =`you became a ${material} ${animal}!`;
 }
 </script>
