@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>loa</title></head>
+<body>
+<select id="in1">
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option selected="selected">5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+</select>
+<select id="in2">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option selected="selected">3</option>
+  <option>4</option>
+</select>
+<button onclick="aniSelect();">click</button>
+<p id="output">you became a(n) fox plushie!</p>
+  <div style="width:45%; padding:10px; margin:5px; border:2px solid #777; border-radius:1rem;">
+    <h3>developerNotes</h3>
+    <hr>
+    <p>15 JUL 2024<br>added developerNotes section.<br>added a 9th animal value and changed the d4 value results.</p>
+  </div>
+<script>
+let i = document.getElementById('in1');
+let e = document.getElementById('in2');
+let o = document.getElementById('output');
+
+  
+function aniSelect() {
+  switch (e.options[e.selectedIndex].text) {
+    case "1":
+      var material = "pooltoy";
+      break;
+    case "2":
+      var material = "";
+      break;
+    case "3":
+      var material = "plushie";
+      break;
+    case "4":
+      var material = "robot"
+    default:
+      break;
+  }
+  switch (i.options[i.selectedIndex].text) {
+      
+    case "1":
+      var animal = "kitty";
+      break;
+
+    case "2":
+      var animal = "bunny";
+      break;
+    
+    case "3":
+      var animal = "deer";
+      break;
+
+    case "4":
+      var animal = "dragon";
+      break;
+      
+    case "5":
+      var animal = "fox";
+      break;
+
+    case "6":
+      var animal = "bear";
+      break;
+
+    case "7":
+      var animal = "dog";
+      break;
+
+    case "8":
+      var animal = "bird";
+      break;
+
+    case "9":
+      var animal = "mouse";
+      break;
+      
+    default:
+      break;
+  }
+  o.textContent =`you became a(n) ${animal} ${material}!`;
+}
+</script>
+</body></html>
