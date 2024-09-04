@@ -20,12 +20,14 @@
   <option>2</option>
   <option>3</option>
   <option>4</option>
+  <option>5</option>
 </select>
 <button onclick="aniSelect();">click</button>
 <p id="output">select some numbers, then click the button to see your results!</p>
   <div style="width:45%; padding:10px; margin:5px; border:2px solid #777; border-radius:1rem;">
     <h3>developerNotes</h3>
     <hr>
+    <p>03SEP2024<br>changed the names of the material animal values, added a fifth material value.</p>
     <p>15 JUL 2024<br>added developerNotes section.<br>added a 9th animal value and changed the d4 value results.</p>
   </div>
 <script>
@@ -37,16 +39,20 @@ let o = document.getElementById('output');
 function aniSelect() {
   switch (e.options[e.selectedIndex].text) {
     case "1":
-      var material = "pooltoy";
+      var material = "squeaky";
       break;
     case "2":
       var material = "";
       break;
     case "3":
-      var material = "plushie";
+      var material = "fluffy";
       break;
     case "4":
-      var material = "robot"
+      var material = "metal";
+      break;
+    case "5":
+      var material = "gooey";
+      break;
     default:
       break;
   }
@@ -91,7 +97,7 @@ function aniSelect() {
     default:
       break;
   }
-  o.textContent =`you became a ${animal} ${material}!`;
+  o.textContent =`you became a ${material} ${animal}!`;
 }
 </script>
 </body></html>
