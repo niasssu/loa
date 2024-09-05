@@ -13,6 +13,7 @@
 <option>7</option>
 <option>8</option>
 <option>9</option>
+<option>10</option>
 </select>
 <select id="in2">
   <option>0</option>
@@ -27,6 +28,7 @@
   <div style="width:45%; padding:10px; margin:5px; border:2px solid #777; border-radius:1rem;">
     <h3>developerNotes</h3>
     <hr>
+    <p>05SEP2024<br>added tenth animal value.</p>
     <p>03SEP2024<br>changed the names of the material animal values, added a fifth material value.</p>
     <p>15 JUL 2024<br>added developerNotes section.<br>added a 9th animal value and changed the d4 value results.</p>
   </div>
@@ -56,44 +58,38 @@ function aniSelect() {
     default:
       break;
   }
+  
   switch (i.options[i.selectedIndex].text) {
-      
     case "1":
       var animal = "kitty";
       break;
-
     case "2":
       var animal = "bunny";
       break;
-    
     case "3":
       var animal = "deer";
       break;
-
     case "4":
       var animal = "dragon";
       break;
-      
     case "5":
       var animal = "fox";
       break;
-
     case "6":
       var animal = "bear";
       break;
-
     case "7":
       var animal = "dog";
       break;
-
     case "8":
       var animal = "bird";
       break;
-
     case "9":
       var animal = "mouse";
       break;
-      
+    case "10":
+      var animal = "penguin";
+      break;
     default:
       break;
   }
