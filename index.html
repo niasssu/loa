@@ -27,7 +27,7 @@
 </select>
 <button onclick="aniSelect();">click</button>
 <p id="output">select some numbers, then click the button to see your results!</p>
-  <div id="devnote" style="width:45%; padding:10px; margin:5px; border:2px solid #777; border-radius:1rem;">
+  <div id="devnote" style="display:none; width:45%; padding:10px; margin:5px; border:2px solid #777; border-radius:1rem;">
     <h3>developerNotes</h3>
     <hr>
     <p>17SEP2024<br>added more animal values.<br>added name prompt.</p>
@@ -45,7 +45,7 @@ switch (uName){
     var authUser = false;
     break;
 }
-if (authUser != true){getElementById('devnote').style.display = "none";}
+if (authUser == true){getElementById('devnote').style.display = "block";}
 
 let i = document.getElementById('in1');
 let e = document.getElementById('in2');
